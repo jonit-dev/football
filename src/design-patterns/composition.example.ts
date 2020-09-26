@@ -1,9 +1,9 @@
 
-interface Shape {
+interface IShape {
   area(): number
 }
 
-class Rectangle implements Shape {
+class Rectangle implements IShape {
   constructor(
     public height: number,
     public width: number,
@@ -14,7 +14,7 @@ class Rectangle implements Shape {
   }
 }
 
-class Circle implements Shape {
+class Circle implements IShape {
   constructor(
     public radius: number,
   ) { }
@@ -29,7 +29,7 @@ class Circle implements Shape {
 class Wall {
   constructor(
     public color: string,
-    public dimensions: Shape
+    public dimensions: IShape
   ) { }
 
   public area(): number {
